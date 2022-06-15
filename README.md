@@ -1,1 +1,1 @@
-# deep-snake-on-satellite-imagery
+# Deep Snake on Satellite Imagery
