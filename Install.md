@@ -1,6 +1,6 @@
 # Installation
 
-### Set up the python environment
+### Installing GCC, Graphics Card Driver and CUDA Toolkit
 
 It's prefered to do this before you start to install latest gcc and remove all nvidia related drivers and configurations:
 ```
@@ -27,6 +27,8 @@ After Installing CUDA 10.0, Please make sure that:
  -   PATH includes `/usr/local/cuda-10.0/bin` # Note: add cuda's path to bashrc to avoid adding it again.
  -   LD_LIBRARY_PATH includes `/usr/local/cuda-10.0/lib64`, or, add `/usr/local/cuda-10.0/lib64` to `/etc/ld.so.conf` and run `ldconfig` as root
 ```
+
+### Set up the python environment
 
 3. Install Conda
 
