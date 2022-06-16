@@ -1,6 +1,6 @@
 # Installation
 
-### Installing GCC, Graphics Card Driver and CUDA Toolkit
+### Set up GCC, Graphics Card Driver and CUDA Toolkit
 
 It's prefered to do this before you start to install latest gcc and remove all nvidia related drivers and configurations:
 ```
