@@ -58,7 +58,7 @@ export CUDA_HOME="/usr/local/cuda-10.0"
 python setup.py install --cuda_ext --cpp_ext
 ```
 
-6. Compile cuda extensions under `lib/csrc`
+7. Compile cuda extensions under `lib/csrc`
 
 ```
 ROOT=/path/to/snake
