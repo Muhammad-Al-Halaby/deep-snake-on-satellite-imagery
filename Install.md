@@ -8,7 +8,7 @@ sudo apt install --reinstall gcc
 sudo apt-get --purge -y remove 'nvidia*' (run at your own risk)
 ```
 
-1. Install Nivida Driver
+1. Install Nvidia Driver
 ```
 # Replace XXX with the suitable number, you can find possoble compatible drivers through `apt search nvidia-driver` or using Software & Update Tool in Ubuntu.
 
