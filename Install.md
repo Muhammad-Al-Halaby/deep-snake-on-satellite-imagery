@@ -15,7 +15,7 @@ sudo apt-get --purge -y remove 'nvidia*' (run at your own risk)
 sudo apt install nvidia-driver-XXX
 ```
 
-2. [Download and Install CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive) [Seclct 'No' at installing Nvidia Driver option]
+2. [Download and Install CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive) [Select 'No' at installing Nvidia Driver option]
 
 Install by running:
 ```
