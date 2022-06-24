@@ -5,7 +5,17 @@
 It's prefered to do this before you start to install latest gcc and remove all nvidia related drivers and configurations:
 ```
 sudo apt install --reinstall gcc
+
+
 sudo apt-get --purge -y remove 'nvidia*' (run at your own risk)
+```
+
+Open /etc/apt/sources.list and add line
+```
+sudo gedit /etc/apt/sources.list 
+deb http://us.archive.ubuntu.com/ubuntu/ bionic main universe
+sudo apt update
+sudo apt install g++-6
 ```
 
 1. Install Nvidia Driver
