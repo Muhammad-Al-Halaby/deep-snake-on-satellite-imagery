@@ -18,6 +18,13 @@ sudo apt update
 sudo apt install g++-6
 ```
 
+When compiling, run the following in case you get `#error -- unsupported GNU version! gcc versions later than 7 are not supported!`:
+```
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 10
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 10
+```
+
+
 1. Install Nvidia Driver
 ```
 # Replace XXX with the suitable number, you can find possoble compatible drivers through `apt search nvidia-driver` or using Software & Update Tool in Ubuntu.
@@ -84,11 +91,6 @@ cd ../roi_align_layer
 python setup.py build_ext --inplace
 ```
 
-When compiling, run the following in case you get `#error -- unsupported GNU version! gcc versions later than 7 are not supported!`:
-```
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 10
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 10
-```
 
 
 ### Set up datasets
