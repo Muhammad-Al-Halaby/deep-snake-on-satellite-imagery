@@ -66,6 +66,8 @@ conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
 pip install Cython==0.28.2
 pip install -r requirements.txt
 pip install "pillow<7"
+pip install protobuf==3.20.1
+pip install termcolor
 ```
 
 6. Installing apex
