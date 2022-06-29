@@ -17,9 +17,6 @@ class Dataset(data.Dataset):
         self.split = split
 
         self.coco = COCO(ann_file)
-        print(self.coco.getImgIds())
-        print(self.coco.getCatIds())
-        print(self.coco.getAnnIds())
         self.anns = np.array(sorted(self.coco.getImgIds()))
         self.anns = self.anns[:500] if split == 'mini' else self.anns
         self.json_category_id_to_contiguous_id = {v: i for i, v in enumerate(self.coco.getCatIds())}

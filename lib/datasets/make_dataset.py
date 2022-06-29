@@ -59,7 +59,6 @@ def make_data_loader(cfg, is_train=True, is_distributed=False, max_iter=-1):
 
     transforms = make_transforms(cfg, is_train)
     dataset = make_dataset(cfg, dataset_name, transforms, is_train)
-    print('len(dataset) =', len(dataset))
     sampler = make_data_sampler(dataset, shuffle)
     batch_sampler = make_batch_data_sampler(cfg, sampler, batch_size, drop_last, max_iter)
     num_workers = cfg.train.num_workers
@@ -70,5 +69,5 @@ def make_data_loader(cfg, is_train=True, is_distributed=False, max_iter=-1):
         num_workers=num_workers,
         collate_fn=collator
     )
-
+    
     return data_loader

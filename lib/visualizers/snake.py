@@ -80,7 +80,9 @@ class Visualizer:
             x_min, y_min, x_max, y_max = box[i]
             ax.plot([x_min, x_min, x_max, x_max, x_min], [y_min, y_max, y_max, y_min, y_min], color='w', linewidth=0.5)
 
-        plt.show()
+        # plt.show()
+        save_path = os.path.realpath(os.path.join('data', 'osd', 'visualization', f"img_{batch['meta']['img_id'].item():04}_test.png"))
+        plt.savefig(save_path, bbox_inches='tight')
 
     def visualize(self, output, batch):
         # self.visualize_ex(output, batch)

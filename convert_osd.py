@@ -86,6 +86,7 @@ def generate_anno(inst_path, images_info, annotations, count, mode, N=128):
         instance = instance_mask * tempMask
         instance_temp = instance.copy()  # findContours will change instance, so copy first
         if mode == 'mask':
+            print(instance)
             rle = mask_util.encode(np.array(instance, order='F'))
             rle['counts'] = rle['counts'].decode('utf-8')
             area = int(np.sum(tempMask))
@@ -162,10 +163,16 @@ def convert_osd():
             ids_val5732.append(id)
 
     ids_val5732 = list(set(ids_val5732))
-    convert_labels(ids_train_noval, 'train', 'snake')
-    convert_labels(ids_val5732, 'trainval', 'snake')
-    convert_labels(ids_val5732, 'val', 'mask')
+    # convert_labels(ids_train_noval, 'train', 'snake')
+    # convert_labels(ids_val5732, 'trainval', 'snake')
+    # convert_labels(ids_val5732, 'val', 'mask')
 
+    # ids_trainOnly = []
+    # for id in ids_train:
+    #     if id not in ids_val:
+    #         ids_trainOnly.append(id)            
+    # convert_labels(ids_trainOnly, 'trainOnly', 'snake')
+    convert_labels(ids_val5732, 'vall', 'snake')
 
 if __name__ == '__main__':
     convert_osd()

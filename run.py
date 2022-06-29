@@ -53,7 +53,6 @@ def run_evaluate():
     network.eval()
 
     data_loader = make_data_loader(cfg, is_train=False)
-    print('len(data_loader) =', len(data_loader))
     evaluator = make_evaluator(cfg)
     for batch in tqdm.tqdm(data_loader):
         inp = batch['inp'].cuda()

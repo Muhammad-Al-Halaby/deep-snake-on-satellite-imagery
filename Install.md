@@ -18,8 +18,6 @@ sudo apt update
 sudo apt install g++-6
 ```
 
-https://mklab.iti.gr/files/oil-spill-detection-dataset.zip
-
 When compiling, run the following in case you get `#error -- unsupported GNU version! gcc versions later than 7 are not supported!`:
 ```
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 10
